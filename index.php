@@ -10,6 +10,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3>Our Vission</h3>
+                    <p>This is created by Passionate Programmer</p>
                 </div>
             </div>
         </div>
@@ -17,6 +18,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3>Our Mission</h3>
+                    <p>This is created by Passionate Programmer</p>
                 </div>
             </div>
         </div>
@@ -24,6 +26,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3>Our Values</h3>
+                    <p>This is created by Passionate Programmer</p>
                 </div>
             </div>
         </div>
