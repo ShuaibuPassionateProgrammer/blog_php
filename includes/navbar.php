@@ -14,7 +14,7 @@
         <!-- Nav Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a href="#" class="nav-link">Home
+                <a href="index.php" class="nav-link">Home
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
