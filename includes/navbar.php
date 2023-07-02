@@ -5,7 +5,7 @@
     <a href="#" class="navbar-brand">MyCollege Website</a>
 
     <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle Navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle Navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -20,11 +20,11 @@
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">Features</a>
+                <a href="abouts.php" class="nav-link">About Us</a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">Pricing</a>
+                <a href="faculties" class="nav-link">Faculties</a>
             </li>
 
             <!-- Dropdown -->
