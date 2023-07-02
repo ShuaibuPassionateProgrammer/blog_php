@@ -33,4 +33,18 @@
     </div>
 </div>
 
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Welcome to My College Website</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, tempore.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
 <?php include("include/footer.php"); ?>
