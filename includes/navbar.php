@@ -20,9 +20,11 @@
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">Home
-                    <span class="sr-only">(current)</span>
-                </a>
+                <a href="#" class="nav-link">Features</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Pricing</a>
             </li>
 
             <!-- Dropdown -->
@@ -42,5 +44,5 @@
             </div>
         </form>
     </div>
-    
+
  </nav>
