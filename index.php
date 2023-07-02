@@ -9,21 +9,21 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h3>Hello, Friends</h3>
+                    <h3>Our Vission</h3>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h3>Hello, Friends</h3>
+                    <h3>Our Mission</h3>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h3>Hello, Friends</h3>
+                    <h3>Our Values</h3>
                 </div>
             </div>
         </div>
