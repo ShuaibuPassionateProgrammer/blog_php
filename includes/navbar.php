@@ -2,7 +2,7 @@
  <nav class="navbar navbar-expand-lg navbar-dark primary-color">
 
     <!-- Navbar brand  -->
-    <a href="#" class="navbar-brand">Navbar</a>
+    <a href="#" class="navbar-brand">MyCollege Website</a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle Navigation">
