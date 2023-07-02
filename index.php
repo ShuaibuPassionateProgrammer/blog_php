@@ -20,7 +20,13 @@
                 </div>
             </div>
         </div>
-        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Hello, Friends</h3>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
