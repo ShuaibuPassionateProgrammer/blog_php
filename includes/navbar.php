@@ -24,7 +24,7 @@
             </li>
 
             <li class="nav-item">
-                <a href="faculties" class="nav-link">Faculties</a>
+                <a href="faculties.php" class="nav-link">Faculties</a>
             </li>
 
             <!-- Dropdown -->
