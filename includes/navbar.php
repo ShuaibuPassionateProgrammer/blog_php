@@ -29,7 +29,7 @@
 
             <!-- Dropdown -->
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Academics</a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                     <a href="#" class="dropdown-item">Action</a>
                     <a href="#" class="dropdown-item">Another action</a>
