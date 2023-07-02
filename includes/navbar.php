@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="myNav">
         <!-- Nav Links -->
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a href="#" class="nav-link">Home
                     <span class="sr-only">(current)</span>
                 </a>
@@ -25,11 +25,22 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a href="#" class="nav-link">Home
-                    <span class="sr-only">(current)</span>
-                </a>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspot="" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                    <a href="#" class="dropdown-item">Action</a>
+                    <a href="#" class="dropdown-item">Another action</a>
+                    <a href="#" class="dropdown-item">Something else here</a>
+                </div>
             </li>
         </ul>
+
+        <form class="form-inline">
+            <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
+            </div>
+        </form>
     </div>
+    
  </nav>
