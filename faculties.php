@@ -6,6 +6,7 @@
     <div class="row">
         <div class="col-md-8">
             <img src="#" alt="Dummy picture">
+            <div class="card"></div>
         </div>
     </div>
 </div>
