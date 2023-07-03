@@ -7,7 +7,9 @@
         <div class="col-md-8">
             <img src="#" alt="Dummy picture">
             <div class="card">
-                <div class="card-body"></div>
+                <div class="card-body">
+                    <h1>Title of the Card</h1>
+                </div>
             </div>
         </div>
     </div>
