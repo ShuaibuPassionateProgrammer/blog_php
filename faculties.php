@@ -19,8 +19,8 @@
                         while($row = mysqli_fetch_array($query_run)) {
                             ?>
                             <h1><?php echo $row['name']; ?></h1>
-                            <h5><?php echo $row['design']; ?></h5> 
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, incidunt.</p>
+                            <h5><?php echo $row['design']; ?></h5>
+                            <p><?php echo $row['description']; ?></p>
                             <img src="#" alt="An image of the department" />
                             <h6>Visibility</h6> 
                             <?php
