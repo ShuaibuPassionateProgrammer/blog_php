@@ -11,6 +11,7 @@
                     <h1>Faculty Example</h1>
                     <h5>Dept Example</h5>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, incidunt.</p>
+                    <a href="#" class="btn btn-ouline-primary">See more</a>
                 </div>
             </div>
         </div>
