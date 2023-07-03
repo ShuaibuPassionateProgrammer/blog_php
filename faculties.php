@@ -13,6 +13,7 @@
                     require("admin/dbconfig.php");
 
                     $query = "SELECT * FROM faculty";
+                    $query_run = mysqli_query($connection, $query);
                     ?>
 
                     <h1>Faculty Example</h1>
