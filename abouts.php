@@ -9,7 +9,12 @@
                 <img src="#" alt="..." class="card-img-top">
                 <div class="card-body">
 
-                    <?php include("admin/dbconfig.php"); ?>
+                    <?php
+                    require("admin/dbconfig.php");
+
+                    $sql = "SELECT * FROM abouts";
+                    $query = myqli_query($connection, $sql);
+                    ?>
 
                     <div class="card-title">About My Website</div>
                     <div class="card-text">Some quick example text to build on the card title and make up the bulk on...</div>
