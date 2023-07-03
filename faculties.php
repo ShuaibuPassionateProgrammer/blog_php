@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            
+            <img src="#" alt="Dummy picture">
         </div>
     </div>
 </div>
