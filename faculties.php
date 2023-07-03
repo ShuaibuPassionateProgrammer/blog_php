@@ -14,6 +14,12 @@
 
                     $query = "SELECT * FROM faculty";
                     $query_run = mysqli_query($connection, $query);
+
+                    if(mysqli_num_rows($query_run) > 0) {
+                        // faculty found
+                    } else {
+                        echo "<span class='text-danger'>No any faculty.</span>";
+                    }
                     ?>
 
                     <h1>Faculty Example</h1>
