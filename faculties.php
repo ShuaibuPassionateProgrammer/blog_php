@@ -21,7 +21,7 @@
                             <h1><?php echo $row['name']; ?></h1>
                             <h5><?php echo $row['design']; ?></h5>
                             <p><?php echo $row['description']; ?></p>
-                            <img src="#" alt="An image of the department" />
+                            <img src="uploads/<?php echo $['images']; ?>" alt="An image of the department" />
                             <h6>Visibility</h6> 
                             <?php
                         }
