@@ -8,6 +8,11 @@
             <img src="#" alt="Dummy picture">
             <div class="card">
                 <div class="card-body">
+
+                    <?php
+                    require("admin/dbconfig.php");
+                    ?>
+
                     <h1>Faculty Example</h1>
                     <h5>Dept Example</h5>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, incidunt.</p>
