@@ -16,7 +16,7 @@
                     $query = mysqli_query($connection, $sql);
 
                     if(mysqli_num_rows($query) > 0) {
-                        foreach($query as $row) {
+                        while($row = mysqli_fetch_assoc($query)) {
                             echo $row['title'];
                             echo $row['subtitle'];
                             echo $row['description'];
@@ -25,7 +25,7 @@
                     }
                     else
                     {
-                        echo "No record found.<br />";
+                        echo "<span class='text-center text-danger'>No record found.</span><br />";
                     }
                     ?>
 
