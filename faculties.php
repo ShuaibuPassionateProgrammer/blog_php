@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-body">
                     <h1>Faculty Example</h1>
-                    
+                    <h5>Dept Example</h5>
                 </div>
             </div>
         </div>
