@@ -10,6 +10,7 @@
                 <div class="card-body">
                     <h1>Faculty Example</h1>
                     <h5>Dept Example</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, incidunt.</p>
                 </div>
             </div>
         </div>
