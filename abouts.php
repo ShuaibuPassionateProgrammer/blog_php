@@ -16,7 +16,7 @@
                     $query = mysqli_query($connection, $sql);
 
                     if(mysqli_num_rows($query) > 0) {
-                        while($row = mysqli_fetch_assoc($query)) {
+                        foreach($query as $row) {
                             echo $row['title'];
                             echo $row['subtitle'];
                             echo $row['description'];
