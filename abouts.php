@@ -17,10 +17,12 @@
 
                     if(mysqli_num_rows($query) > 0) {
                         foreach($query as $row) {
-                            echo $row['title'];
-                            echo $row['subtitle'];
-                            echo $row['description'];
-                            echo $row['links'];
+                            ?>
+                            <h5 class="card-title"><?php echo $row['title']; ?></h5>
+                            <h6><?php echo $row['subtitle']; ?></h6>
+                            <p class="card-text"><?php echo $row['description']; ?></p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <?php
                         }
                     }
                     else
@@ -28,11 +30,6 @@
                         echo "<span class='text-center text-danger'>No record found.</span><br />";
                     }
                     ?>
-
-                    <h5 class="card-title">About My Website</h5>
-                    <h6>Sub Title</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk on...</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         </div>
