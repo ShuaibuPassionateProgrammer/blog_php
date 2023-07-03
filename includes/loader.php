@@ -10,6 +10,11 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
