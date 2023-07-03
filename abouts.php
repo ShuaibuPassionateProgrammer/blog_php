@@ -13,7 +13,20 @@
                     require("admin/dbconfig.php");
 
                     $sql = "SELECT * FROM abouts";
-                    $query = myqli_query($connection, $sql);
+                    $query = mysqli_query($connection, $sql);
+
+                    if(mysqli_num_rows($query) > 0) {
+                        foreach($query as $row) {
+                            echo $row['title'];
+                            echo $row['subtitle'];
+                            echo $row['description'];
+                            echo $row['links'];
+                        }
+                    }
+                    else
+                    {
+                        echo "No record found.<br />";
+                    }
                     ?>
 
                     <div class="card-title">About My Website</div>
