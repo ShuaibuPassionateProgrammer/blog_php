@@ -12,9 +12,11 @@
                     <h5>Dept Example</h5>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, incidunt.</p>
                     <img src="#" alt="An image of the department" />
+                    <h6>Is visible: false</h6> 
                     <a href="#" class="btn btn-ouline-primary">See more</a>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>
