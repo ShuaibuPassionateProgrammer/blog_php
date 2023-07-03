@@ -17,22 +17,20 @@
 
                     if(mysqli_num_rows($query_run) > 0) {
                         while($row = mysqli_fetch_array($query_run)) {
-                            echo $row['name'];
-                            echo $row['design'];
-                            echo $row['description'];
-                            echo $row['images'];
-                            echo $row['visible'];
+                            ?>
+                            <h1><?php echo $row['name']; ?></h1>
+                            <h5><?php echo $row['design']; ?></h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, incidunt.</p>
+                            <img src="#" alt="An image of the department" />
+                            <h6>Visibility</h6> 
+                            <?php
                         }
                     } else {
                         echo "<span class='text-danger'>No any faculty.</span>";
                     }
                     ?>
 
-                    <h1>Faculty Example</h1>
-                    <h5>Dept Example</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, incidunt.</p>
-                    <img src="#" alt="An image of the department" />
-                    <h6>Visibility</h6> 
+                    
                     <a href="#" class="btn btn-ouline-primary">See more</a>
                 </div>
             </div>
