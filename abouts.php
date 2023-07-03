@@ -8,6 +8,9 @@
             <div class="card">
                 <img src="#" alt="..." class="card-img-top">
                 <div class="card-body">
+
+                    <?php include("admin/dbconfig.php"); ?>
+
                     <div class="card-title">About My Website</div>
                     <div class="card-text">Some quick example text to build on the card title and make up the bulk on...</div>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
