@@ -16,7 +16,13 @@
                     $query_run = mysqli_query($connection, $query);
 
                     if(mysqli_num_rows($query_run) > 0) {
-                        // faculty found
+                        while($row = mysqli_fetch_array($query_run)) {
+                            echo $row['name'];
+                            echo $row['design'];
+                            echo $row['description'];
+                            echo $row['images'];
+                            echo $row['visible'];
+                        }
                     } else {
                         echo "<span class='text-danger'>No any faculty.</span>";
                     }
