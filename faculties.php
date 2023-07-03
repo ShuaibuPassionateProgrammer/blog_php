@@ -8,7 +8,8 @@
             <img src="#" alt="Dummy picture">
             <div class="card">
                 <div class="card-body">
-                    <h1>Title of the Card</h1>
+                    <h1>Faculty Example</h1>
+                    
                 </div>
             </div>
         </div>
