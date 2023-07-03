@@ -28,6 +28,10 @@
     </div>
     <script>
         var loader = document.querySelector(".loader");
+        
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 8000);
     </script>
 </body>
 </html>
