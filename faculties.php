@@ -11,6 +11,8 @@
 
                     <?php
                     require("admin/dbconfig.php");
+
+                    $query = "SELECT * FROM faculty";
                     ?>
 
                     <h1>Faculty Example</h1>
