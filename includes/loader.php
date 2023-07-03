@@ -6,6 +6,12 @@
     <title>Blog PHP</title>
 </head>
 <body>
-    <div class="loader"></div>
+    <div class="loader">
+        <div class="loading">
+            <div class="load">
+                <h1>Loading...</h1>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
