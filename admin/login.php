@@ -4,10 +4,16 @@
             <div class="col-md-6">
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <div class="mb-3 text-center">
-                        <h2>BLOG Admin</h2>
+                        <h2>BLOG ADMIN</h2>
                     </div>
                     <div class="mb-3">
                         <input type="text" class="input form-control" placeholder="Username">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="input form-control" placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" class="btn btn-primary">
                     </div>
                 </form>
             </div>
