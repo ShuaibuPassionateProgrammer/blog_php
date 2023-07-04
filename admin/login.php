@@ -4,5 +4,5 @@
             <button>Back to Business</button>
         </div>
     </div>
-</body>
-</html>
+
+<?php include("includes/footer.php"); ?>
