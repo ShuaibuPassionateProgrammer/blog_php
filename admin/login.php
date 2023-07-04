@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            //
+            <button>Back to Business</button>
         </div>
     </div>
 </body>
