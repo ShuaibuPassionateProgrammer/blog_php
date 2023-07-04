@@ -6,6 +6,10 @@
     <title>Admin Login</title>
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            //
+        </div>
+    </div>
 </body>
 </html>
