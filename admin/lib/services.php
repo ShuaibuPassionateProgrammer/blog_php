@@ -15,6 +15,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
     else if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         array_push($errors, "Enter a valid email address.");
     }
+
+    if(empty($password)) array_push($errors, "Password field should not be empty!");
 }
 else {
     header("Location: ../");
