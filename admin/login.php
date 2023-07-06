@@ -7,7 +7,7 @@
                         <h2>BLOG ADMIN</h2>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="input form-control" placeholder="Username">
+                        <input type="text" class="input form-control" placeholder="Username" name="username">
                     </div>
                     <div class="mb-3">
                         <input type="password" class="input form-control" placeholder="Password" name="password">
