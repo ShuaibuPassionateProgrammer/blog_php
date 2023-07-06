@@ -17,6 +17,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
     }
 
     if(empty($password)) array_push($errors, "Password field should not be empty!");
+
+    if(count($errors) === 0) {}
 }
 else {
     header("Location: ../");
