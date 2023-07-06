@@ -1,5 +1,5 @@
 <?php include("includes/header.php"); ?>
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
         <div class="row justify-content-center">
             <div class="col-md-12 card p-4">
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
