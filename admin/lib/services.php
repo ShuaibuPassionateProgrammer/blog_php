@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("../config/dbconfig.php");
 
 $email = "";
@@ -26,7 +27,9 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
             $result = mysqli_stmt_get_result($stmt);
             $user = mysqli_fetch_assoc($result);
 
-            if($user && password_verify($password, $user['password'])) {}
+            if($user && password_verify($password, $user['password'])) {
+                $_SESSION['email'] = $user['email'];
+            }
         }
     }
 }
