@@ -2,7 +2,7 @@
     <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
         <div class="row justify-content-center">
             <div class="col-md-12 card p-4">
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <form action="lib/services.php">
                     <div class="mb-3 text-center">
                         <h2>BLOG ADMIN</h2>
                     </div>
