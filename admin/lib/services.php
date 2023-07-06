@@ -18,7 +18,15 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
 
     if(empty($password)) array_push($errors, "Password field should not be empty!");
 
-    if(count($errors) === 0) {}
+    if(count($errors) === 0) {
+        $user_check_query = "SELECT * FROM admin WHERE email=?";
+        if($stmt = mysqli_prepare($connection, $user_check_query)) {
+            mysqli_stmt_bind_param($stmt, "s", $email);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+            $user = mysqli_fetch_assoc($result);
+        }
+    }
 }
 else {
     header("Location: ../");
