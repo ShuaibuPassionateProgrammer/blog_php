@@ -1,5 +1,5 @@
 <?php include("includes/header.php"); ?>
-    <div class="container">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row justify-content-center mt-4">
             <div class="col-md-6">
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -19,5 +19,6 @@
             </div>
         </div>
     </div>
+
 
 <?php include("includes/footer.php"); ?>
