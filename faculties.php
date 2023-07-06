@@ -12,7 +12,7 @@
                 <div class="card-body">
 
                     <?php
-                    require("admin/dbconfig.php");
+                    require("admin/config/dbconfig.php");
 
                     $query = "SELECT * FROM faculty";
                     $query_run = mysqli_query($connection, $query);
