@@ -12,7 +12,7 @@
                 <div class="card-body">
 
                     <?php
-                    require("admin/dbconfig.php");
+                    require("admin/config/dbconfig.php");
 
                     $sql = "SELECT * FROM abouts";
                     $query = mysqli_query($connection, $sql);
