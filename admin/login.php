@@ -2,10 +2,10 @@
     <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
         <div class="row justify-content-center">
             <div class="col-md-12 card p-4">
-                <div class="m-3">
-                    <?php require_once('errors.php'); ?>
-                </div>
                 <form action="lib/services.php">
+                    <div class="m-3">
+                        <?php require_once('errors.php'); ?>
+                    </div>
                     <div class="mb-3 text-center">
                         <h2>BLOG ADMIN</h2>
                     </div>
