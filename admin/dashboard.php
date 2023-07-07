@@ -11,5 +11,8 @@ session_start();
 </head>
 <body>
     <h1>Admin Dashboard</h1>
+
+    <?php if(isset($_SESSION['email'])): ?>
+    <?php endif; ?>
 </body>
 </html>
