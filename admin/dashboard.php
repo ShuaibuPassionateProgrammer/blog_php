@@ -5,6 +5,8 @@ if(!isset($_SESSION['email'])) {
     header("Location: ./login.php");
     exit();
 }
+
+session_regenerate_id();
 ?>
 
 <!DOCTYPE html>
