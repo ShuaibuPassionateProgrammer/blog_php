@@ -17,5 +17,7 @@ session_start();
             <p>Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?></p>
         </div>
     <?php endif; ?>
+
+    <form action="./logout.php" method="post"></form>
 </body>
 </html>
