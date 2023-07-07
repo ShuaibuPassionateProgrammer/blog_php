@@ -27,6 +27,7 @@
 
     <script>
         var loader = document.querySelector(".loader");
+        setTimeout(() => {}, 9000);
     </script>
 </body>
 </html>
