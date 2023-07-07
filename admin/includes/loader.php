@@ -26,7 +26,7 @@
     </div>
 
     <script>
-        
+        var loader = document.querySelector(".loader");
     </script>
 </body>
 </html>
