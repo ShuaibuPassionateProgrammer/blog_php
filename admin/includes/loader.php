@@ -24,5 +24,9 @@
             <div class="load">Loding...</div>
         </div>
     </div>
+
+    <script>
+        
+    </script>
 </body>
 </html>
