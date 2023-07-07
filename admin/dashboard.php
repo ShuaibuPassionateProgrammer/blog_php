@@ -18,6 +18,8 @@ session_start();
         </div>
     <?php endif; ?>
 
-    <form action="./logout.php" method="post"></form>
+    <form action="./logout.php" method="post">
+        <button type="submit" name="logout" class="btn btn-danger">Logout</button>
+    </form>
 </body>
 </html>
