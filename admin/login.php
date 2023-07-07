@@ -1,8 +1,9 @@
 <?php include("includes/header.php"); ?>
+<?php include("lib/services.php"); ?>
     <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
         <div class="row justify-content-center">
             <div class="col-md-12 card p-4">
-                <form action="lib/services.php">
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <div class="m-3">
                         <?php require_once('errors.php'); ?>
                     </div>
