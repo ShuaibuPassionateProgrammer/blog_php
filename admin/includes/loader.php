@@ -6,6 +6,10 @@
     <title>Blog Website</title>
 </head>
 <body>
-    
+    <div class="loader">
+        <div class="loading">
+            <div class="load">Loding...</div>
+        </div>
+    </div>
 </body>
 </html>
