@@ -14,7 +14,7 @@ session_start();
 
     <?php if(isset($_SESSION['email'])): ?>
         <div>
-            <p>Welcome, <?php echo $_SESSION['email']; ?></p>
+            <p>Welcome, <?php echo htmlspecialchars($_SESSION['email']); ?></p>
         </div>
     <?php endif; ?>
 </body>
