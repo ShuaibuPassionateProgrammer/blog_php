@@ -36,6 +36,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
                 } else {
                     $errors[] = "Incorrect password.";
                 }
+            } else {
+                $errors[] = "No account found with that email.";
             }
         }
         else {
