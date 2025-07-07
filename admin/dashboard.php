@@ -98,6 +98,9 @@ if (empty($_SESSION['csrf_token'])) {
             padding: 2rem;
             transition: margin-left 0.3s;
         }
+        .main-content.collapsed {
+            margin-left: var(--sidebar-collapsed-width);
+        }
     </style>
 </head>
 <body>
