@@ -189,6 +189,7 @@ if (empty($_SESSION['csrf_token'])) {
         const sidebar = document.getElementById('sidebar');
         const mainContent = document.getElementById('mainContent');
         const topNavbar = document.getElementById('topNavbar');
+        const overlay = document.getElementById('overlay');
     </script>
 </body>
 </html>
