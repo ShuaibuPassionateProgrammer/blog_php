@@ -14,5 +14,9 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Invalid email format.";
     }
+
+    if(empty($password)) {
+        $errors[] = "Password is required.";
+    }
 }
 ?>
