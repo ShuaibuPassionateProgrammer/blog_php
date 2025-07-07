@@ -18,5 +18,10 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
     if(empty($password)) {
         $errors[] = "Password is required.";
     }
+
+    if(empty($errors)) {}
+    else {
+        $errors[] = "Something went wrong. Please try again.";
+    }
 }
 ?>
