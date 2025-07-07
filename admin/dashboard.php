@@ -59,6 +59,11 @@ if (empty($_SESSION['csrf_token'])) {
       background-color: #0b5ed7;
     }
 
+    .sidebar a.nav-link:hover {
+        background-color: #0b5ed7;
+    }
+
+
     .sidebar .active {
       background-color: #084298;
     }
