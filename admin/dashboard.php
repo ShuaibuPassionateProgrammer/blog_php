@@ -162,5 +162,18 @@ if (empty($_SESSION['csrf_token'])) {
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
         </form>
     </div>
+
+
+    <!-- Top Navbar -->
+    <nav id="topNavbar" class="navbar navbar-expand-lg navbar-dark bg-primary top-navbar shadow-sm">
+        <div class="container-fluid">
+            <button id="toggleSidebar" class="btn btn-outline-light me-3">
+            <i class="fas fa-bars"></i>
+            </button>
+            <span class="navbar-text text-white">
+            Logged in as: <strong><?= htmlspecialchars($_SESSION['email']); ?></strong>
+            </span>
+        </div>
+    </nav>
 </body>
 </html>
