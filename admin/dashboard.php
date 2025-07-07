@@ -49,6 +49,14 @@ if (empty($_SESSION['csrf_token'])) {
             z-index: 1040;
             transition: all 0.3s ease;
         }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            transition: background 0.2s;
+        }
     </style>
 </head>
 <body>
