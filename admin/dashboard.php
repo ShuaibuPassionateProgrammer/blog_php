@@ -191,6 +191,7 @@ if (empty($_SESSION['csrf_token'])) {
         const topNavbar = document.getElementById('topNavbar');
         const overlay = document.getElementById('overlay');
         const logoutLink = document.getElementById('logoutLink');
+        const logoutForm = document.getElementById('logoutForm');
     </script>
 </body>
 </html>
