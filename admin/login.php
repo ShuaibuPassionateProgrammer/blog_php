@@ -1,13 +1,14 @@
 <?php 
-include("includes/header.php"); 
-include("lib/services.php");
+session_start();
+include("config/dbconfig.php");  // connect to DB
+include("includes/header.php");
 
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
-    // Basic validation
+    // Sanitize & validate input
     $email = trim($_POST['email'] ?? '');
-    $password = trim($_POST['password'] ?? '');
+    $password = $_POST['password'] ?? '';
 
     if (empty($email)) {
         $errors[] = "Email is required.";
@@ -20,27 +21,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     }
 
     if (empty($errors)) {
-        // Perform login logic here (use prepared statements!)
-        // Example (pseudo):
-        /*
-        $stmt = $connection->prepare("SELECT * FROM users WHERE email = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if ($result->num_rows === 1) {
-            $user = $result->fetch_assoc();
-            if (password_verify($password, $user['password'])) {
-                session_start();
-                $_SESSION['email'] = $user['email'];
-                header("Location: ./dashboard.php");
-                exit();
+        // Prepare SQL statement to prevent SQL Injection
+        $stmt = $connection->prepare("SELECT email, password FROM users WHERE email = ?");
+        if ($stmt) {
+            $stmt->bind_param("s", $email);
+            $stmt->execute();
+
+            // Fetch result
+            $result = $stmt->get_result();
+            if ($result->num_rows === 1) {
+                $user = $result->fetch_assoc();
+
+                // Verify password
+                if (password_verify($password, $user['password'])) {
+                    // Password matches, create session
+                    session_regenerate_id(true);
+                    $_SESSION['email'] = $user['email'];
+
+                    // Redirect to dashboard
+                    header("Location: ./dashboard.php");
+                    exit();
+                } else {
+                    $errors[] = "Incorrect password.";
+                }
             } else {
-                $errors[] = "Incorrect password.";
+                $errors[] = "Email not found.";
             }
+            $stmt->close();
         } else {
-            $errors[] = "Email not found.";
+            $errors[] = "Database query failed.";
         }
-        */
     }
 }
 ?>
