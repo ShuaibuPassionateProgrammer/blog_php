@@ -19,7 +19,9 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
         $errors[] = "Password is required.";
     }
 
-    if(empty($errors)) {}
+    if(empty($errors)) {
+        $stmt = $connection->prepare("SELECT email, password FROM WHERE email = ?");
+    }
     else {
         $errors[] = "Something went wrong. Please try again.";
     }
