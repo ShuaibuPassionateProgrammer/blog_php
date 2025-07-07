@@ -212,6 +212,11 @@ if (empty($_SESSION['csrf_token'])) {
             sidebar.classList.remove('mobile-visible');
             overlay.classList.remove('active');
         });
+
+        logoutLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            logoutForm.submit();
+        });
     </script>
 </body>
 </html>
