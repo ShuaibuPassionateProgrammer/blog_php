@@ -1,37 +1,30 @@
-<?php include("includes/loader.php"); ?>
+<?php 
+include("includes/loader.php");
+include("includes/header.php");
+include("includes/navbar.php"); 
 
-<?php include("includes/header.php"); ?>
+require("admin/config/dbconfig.php");
 
-<?php include("includes/navbar.php"); ?>
+$sql = "SELECT * FROM abouts";
+$query = mysqli_query($connection, $sql);
+?>
 
 <div class="container py-5">
     <div class="row py-3">
         <div class="col-md-8">
             <div class="card">
-                <img src="#" alt="..." class="card-img-top">
+                <img src="#" alt="About image" class="card-img-top" />
                 <div class="card-body">
-
-                    <?php
-                    require("admin/config/dbconfig.php");
-
-                    $sql = "SELECT * FROM abouts";
-                    $query = mysqli_query($connection, $sql);
-
-                    if(mysqli_num_rows($query) > 0) {
-                        foreach($query as $row) {
-                            ?>
-                            <h5 class="card-title"><?php echo $row['title']; ?></h5>
-                            <h6><?php echo $row['subtitle']; ?></h6>
-                            <p class="card-text"><?php echo $row['description']; ?></p>
+                    <?php if(mysqli_num_rows($query) > 0): ?>
+                        <?php while($row = mysqli_fetch_assoc($query)): ?>
+                            <h5 class="card-title"><?= htmlspecialchars($row['title']) ?></h5>
+                            <h6><?= htmlspecialchars($row['subtitle']) ?></h6>
+                            <p class="card-text"><?= nl2br(htmlspecialchars($row['description'])) ?></p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
-                            <?php
-                        }
-                    }
-                    else
-                    {
-                        echo "<span class='text-center text-danger'>No record found.</span><br />";
-                    }
-                    ?>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                        <span class="text-center text-danger">No record found.</span><br />
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -49,4 +42,4 @@
     </div>
 </div>
 
-<?php include("include/footer.php"); ?>
+<?php include("includes/footer.php"); ?>
