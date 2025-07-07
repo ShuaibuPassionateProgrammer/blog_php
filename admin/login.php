@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
             $stmt->execute();
             $result = $stmt->get_result();
             if($result->num_rows === 1) {
-                
+                $user = $result->fetch_assoc();
             }
         }
         else {
