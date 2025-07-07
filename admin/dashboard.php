@@ -136,6 +136,10 @@ if (empty($_SESSION['csrf_token'])) {
             background-color: rgba(0, 0, 0, 0.4);
             z-index: 1030;
         }
+
+        .mobile-overlay.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
