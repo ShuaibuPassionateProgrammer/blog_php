@@ -178,9 +178,30 @@ if (empty($_SESSION['csrf_token'])) {
 
     <!-- Main Content -->
     <main id="mainContent" class="main-content">
-        <div class="container">
-            <h2>Welcome to the Admin Dashboard</h2>
-            <p>You are logged in as <strong><?= htmlspecialchars($_SESSION['email']); ?></strong>.</p>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                    <h3 class="card-title mb-4 text-primary">Welcome to the Admin Dashboard</h3>
+                    <p class="card-text">
+                        Hello, <strong><?= htmlspecialchars($_SESSION['email']); ?></strong> 👋<br>
+                        Use the sidebar to manage users, view reports, and configure settings.
+                    </p>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-6">
+                        <p><i class="fas fa-users text-primary"></i> Manage user accounts</p>
+                        </div>
+                        <div class="col-md-6">
+                        <p><i class="fas fa-chart-line text-primary"></i> View analytics</p>
+                        </div>
+                        <!-- Add more dashboard widgets or links as needed -->
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
     </main>
 
