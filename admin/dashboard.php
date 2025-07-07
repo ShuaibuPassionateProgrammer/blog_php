@@ -192,6 +192,10 @@ if (empty($_SESSION['csrf_token'])) {
         const overlay = document.getElementById('overlay');
         const logoutLink = document.getElementById('logoutLink');
         const logoutForm = document.getElementById('logoutForm');
+
+        function isMobile() {
+            return window.innerWidth <= 768;
+        }
     </script>
 </body>
 </html>
