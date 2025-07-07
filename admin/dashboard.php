@@ -187,6 +187,7 @@ if (empty($_SESSION['csrf_token'])) {
     <script>
         const toggleBtn = document.getElementById('toggleSidebar');
         const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
     </script>
 </body>
 </html>
