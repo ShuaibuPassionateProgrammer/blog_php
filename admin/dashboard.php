@@ -75,6 +75,9 @@ if (empty($_SESSION['csrf_token'])) {
         .sidebar.sidebar-collapsed .nav-link span {
             display: none;
         }
+        .sidebar.sidebar-collapsed .text-center h5 {
+            display: none;
+        }
     </style>
 </head>
 <body>
