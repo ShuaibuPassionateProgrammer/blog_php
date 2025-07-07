@@ -140,18 +140,27 @@ if (empty($_SESSION['csrf_token'])) {
     </div>
   </main>
 
-  <!-- Toggle Sidebar Script -->
   <script>
+    // Sidebar toggle
     const toggleBtn = document.getElementById('toggleSidebar');
     const sidebar = document.getElementById('sidebar');
     const mainContent = document.getElementById('mainContent');
     const topNavbar = document.getElementById('topNavbar');
 
     toggleBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('sidebar-collapsed');
-      mainContent.classList.toggle('collapsed');
-      topNavbar.classList.toggle('collapsed');
+        sidebar.classList.toggle('sidebar-collapsed');
+        mainContent.classList.toggle('collapsed');
+        topNavbar.classList.toggle('collapsed');
     });
-  </script>
+
+    // Logout click behavior
+    const logoutLink = document.getElementById('logoutLink');
+    const logoutForm = document.getElementById('logoutForm');
+
+    logoutLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        logoutForm.submit();
+    });
+    </script>
 </body>
 </html>
