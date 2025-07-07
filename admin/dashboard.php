@@ -63,6 +63,9 @@ if (empty($_SESSION['csrf_token'])) {
         .sidebar .active {
             background-color: #084298;
         }
+        .sidebar i {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
