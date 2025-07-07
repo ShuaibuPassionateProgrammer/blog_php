@@ -3,7 +3,7 @@
 include('config/dbconfig.php');
 
 $email = 'admin@example.com';
-$password = 'YourPassword123';
+$password = '1234';
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 $stmt = $connection->prepare("INSERT INTO admin (email, password) VALUES (?, ?)");
