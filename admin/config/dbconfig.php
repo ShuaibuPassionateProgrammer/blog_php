@@ -1,17 +1,10 @@
 <?php
-// Database configuration
-$host = "localhost";
-$user = "root";
-$password = "";
-$dbname = "php_blog";
+// Improved: Use error handling for DB connection
+$connection = new mysqli("localhost", "root", "", "php_blog");
 
-// Create connection
-$connection = mysqli_connect($host, $user, $password, $dbname);
-
-// Check connection
-if (!$connection) {
-    die("Database connection failed: " . mysqli_connect_error());
+if ($connection->connect_error) {
+    die("Database connection failed: " . $connection->connect_error);
 }
 
-// Optional: set charset to utf8mb4 for better unicode support
-mysqli_set_charset($connection, "utf8mb4");
+// Set charset to avoid charset issues
+$connection->set_charset("utf8mb4");
