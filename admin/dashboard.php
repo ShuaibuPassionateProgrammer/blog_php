@@ -196,6 +196,17 @@ if (empty($_SESSION['csrf_token'])) {
         function isMobile() {
             return window.innerWidth <= 768;
         }
+
+        toggleBtn.addEventListener('click', () => {
+            if (isMobile()) {
+                sidebar.classList.toggle('mobile-visible');
+                overlay.classList.toggle('active');
+            } else {
+                sidebar.classList.toggle('sidebar-collapsed');
+                mainContent.classList.toggle('collapsed');
+                topNavbar.classList.toggle('collapsed');
+            }
+        });
     </script>
 </body>
 </html>
