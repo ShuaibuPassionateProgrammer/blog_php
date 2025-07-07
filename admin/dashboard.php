@@ -207,6 +207,11 @@ if (empty($_SESSION['csrf_token'])) {
                 topNavbar.classList.toggle('collapsed');
             }
         });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('mobile-visible');
+            overlay.classList.remove('active');
+        });
     </script>
 </body>
 </html>
