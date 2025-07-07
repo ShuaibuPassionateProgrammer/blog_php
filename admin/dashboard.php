@@ -145,5 +145,18 @@ if (empty($_SESSION['csrf_token'])) {
 <body>
     <!-- Mobile Overlay -->
     <div id="overlay" class="mobile-overlay"></div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div class="text-center mb-4">
+            <h5><i class="fas fa-user-shield"></i> <span>Admin</span></h5>
+        </div>
+        <a href="dashboard.php" class="nav-link active"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+        <a href="#" class="nav-link"><i class="fas fa-users"></i> <span>Users</span></a>
+        <a href="#" class="nav-link"><i class="fas fa-chart-line"></i> <span>Reports</span></a>
+        <a href="#" class="nav-link"><i class="fas fa-cog"></i> <span>Settings</span></a>
+
+    
+    </div>
 </body>
 </html>
