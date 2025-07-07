@@ -1,4 +1,5 @@
 <?php 
+$departmentName = "Computer Science";
 include("includes/loader.php");
 include("includes/header.php");
 include("includes/navbar.php"); 
