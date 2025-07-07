@@ -11,7 +11,7 @@
                 <a href="index.php" class="nav-link">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a href="about.php" class="nav-link">About Us</a>
+                <a href="abouts.php" class="nav-link">About Us</a>
             </li>
             <li class="nav-item">
                 <a href="faculties.php" class="nav-link">Faculties</a>
