@@ -27,6 +27,15 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
             $result = $stmt->get_result();
             if($result->num_rows === 1) {
                 $user = $result->fetch_assoc();
+
+                if (password_verify($password, $user['password'])) {
+                    session_regenerate_id(true);
+                    $_SESSION['email'] = $user['email'];
+                    header("Location: dashboard.php");
+                    exit();
+                } else {
+                    $errors[] = "Incorrect password.";
+                }
             }
         }
         else {
