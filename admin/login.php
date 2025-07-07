@@ -23,6 +23,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
         $stmt = $connection->prepare("SELECT email, password FROM WHERE email = ?");
         if($stmt) {
             $stmt->bind_param("s", $email);
+            $stmt->execute();
         }
         else {
             $errors[] = "Something went wrong. Please try again.";
