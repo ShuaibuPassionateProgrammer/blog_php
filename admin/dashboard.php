@@ -120,6 +120,10 @@ if (empty($_SESSION['csrf_token'])) {
             .main-content {
                 margin-left: 0;
             }
+
+            .sidebar.sidebar-collapsed {
+                width: var(--sidebar-width); /* disable collapse on small screens */
+            }
         }
     </style>
 </head>
