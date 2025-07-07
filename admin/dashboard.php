@@ -69,6 +69,9 @@ if (empty($_SESSION['csrf_token'])) {
         .sidebar .nav-link span {
             display: inline;
         }
+        .sidebar.sidebar-collapsed {
+            width: var(--sidebar-collapsed-width);
+        }
     </style>
 </head>
 <body>
