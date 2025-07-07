@@ -32,6 +32,10 @@ if (empty($_SESSION['csrf_token'])) {
             --sidebar-width: 250px;
             --sidebar-collapsed-width: 70px;
         }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            }
     </style>
 </head>
 <body>
