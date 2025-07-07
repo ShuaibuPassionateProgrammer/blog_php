@@ -24,6 +24,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
         if($stmt) {
             $stmt->bind_param("s", $email);
             $stmt->execute();
+            $result = $stmt->get_result();
         }
         else {
             $errors[] = "Something went wrong. Please try again.";
