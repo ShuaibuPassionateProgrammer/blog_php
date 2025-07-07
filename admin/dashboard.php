@@ -78,6 +78,15 @@ if (empty($_SESSION['csrf_token'])) {
         .sidebar.sidebar-collapsed .text-center h5 {
             display: none;
         }
+        /* Top Navbar */
+        .top-navbar {
+            position: fixed;
+            top: 0;
+            left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+            z-index: 1030;
+            transition: left 0.3s, width 0.3s;
+        }
     </style>
 </head>
 <body>
