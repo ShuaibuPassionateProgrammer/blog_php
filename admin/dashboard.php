@@ -175,5 +175,13 @@ if (empty($_SESSION['csrf_token'])) {
             </span>
         </div>
     </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent" class="main-content">
+        <div class="container">
+            <h2>Welcome to the Admin Dashboard</h2>
+            <p>You are logged in as <strong><?= htmlspecialchars($_SESSION['email']); ?></strong>.</p>
+        </div>
+    </main>
 </body>
 </html>
