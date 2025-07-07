@@ -35,7 +35,20 @@ if (empty($_SESSION['csrf_token'])) {
         body {
             font-family: 'Segoe UI', sans-serif;
             background-color: #f8f9fa;
-            }
+        }
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: var(--sidebar-width);
+            background-color: #0d6efd;
+            color: white;
+            padding-top: 1rem;
+            z-index: 1040;
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body>
