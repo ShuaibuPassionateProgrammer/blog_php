@@ -12,7 +12,6 @@ if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,62 +26,52 @@ if (empty($_SESSION['csrf_token'])) {
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Custom Style -->
   <style>
+    :root {
+      --sidebar-width: 250px;
+      --sidebar-collapsed-width: 70px;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
     }
 
+    /* Sidebar */
     .sidebar {
-      height: 100vh;
-      background-color: #0d6efd;
-      color: white;
-      padding-top: 1rem;
       position: fixed;
       top: 0;
       left: 0;
-      width: 250px;
-      transition: all 0.3s;
-      z-index: 1000;
+      height: 100vh;
+      width: var(--sidebar-width);
+      background-color: #0d6efd;
+      color: white;
+      padding-top: 1rem;
+      z-index: 1040;
+      transition: all 0.3s ease;
+      overflow-y: auto;
     }
 
     .sidebar a {
       color: white;
       text-decoration: none;
-      display: block;
+      display: flex;
+      align-items: center;
       padding: 0.75rem 1rem;
-      transition: 0.2s;
+      transition: background 0.2s;
     }
 
     .sidebar a:hover {
       background-color: #0b5ed7;
     }
 
-    .sidebar a.nav-link:hover {
-        background-color: #0b5ed7;
-    }
-
-
     .sidebar .active {
       background-color: #084298;
     }
 
-    .main-content {
-      margin-left: 250px;
-      padding: 2rem;
-      transition: margin-left 0.3s;
-    }
-
-    .sidebar-collapsed {
-      width: 70px;
-    }
-
-    .main-content.collapsed {
-      margin-left: 70px;
-    }
-
-    .sidebar .nav-link i {
+    .sidebar i {
       margin-right: 10px;
     }
 
@@ -94,35 +83,84 @@ if (empty($_SESSION['csrf_token'])) {
       display: none;
     }
 
+    /* Mobile Sidebar */
+    .sidebar.mobile-hidden {
+      transform: translateX(-100%);
+    }
+
+    .sidebar.mobile-visible {
+      transform: translateX(0);
+    }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1030;
+    }
+
+    .mobile-overlay.active {
+      display: block;
+    }
+
+    /* Top Navbar */
     .top-navbar {
-      margin-left: 250px;
+      margin-left: var(--sidebar-width);
       transition: margin-left 0.3s;
     }
 
     .top-navbar.collapsed {
-      margin-left: 70px;
+      margin-left: var(--sidebar-collapsed-width);
+    }
+
+    @media (max-width: 768px) {
+      .top-navbar {
+        margin-left: 0 !important;
+      }
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: var(--sidebar-width);
+      padding: 2rem;
+      transition: margin-left 0.3s;
+    }
+
+    .main-content.collapsed {
+      margin-left: var(--sidebar-collapsed-width);
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        margin-left: 0 !important;
+      }
     }
   </style>
 </head>
-
 <body>
+
+  <!-- Mobile Overlay -->
+  <div id="overlay" class="mobile-overlay"></div>
+
   <!-- Sidebar -->
-  <div id="sidebar" class="sidebar">
+  <div id="sidebar" class="sidebar mobile-hidden">
     <div class="text-center mb-4">
-      <h5><i class="fas fa-user-shield"></i> Admin</h5>
+      <h5><i class="fas fa-user-shield"></i> <span class="d-none d-md-inline">Admin</span></h5>
     </div>
     <a href="dashboard.php" class="nav-link active"><i class="fas fa-home"></i> <span>Dashboard</span></a>
     <a href="#" class="nav-link"><i class="fas fa-users"></i> <span>Users</span></a>
     <a href="#" class="nav-link"><i class="fas fa-chart-line"></i> <span>Reports</span></a>
     <a href="#" class="nav-link"><i class="fas fa-cog"></i> <span>Settings</span></a>
-    <a href="#" id="logoutLink" class="nav-link text-white mt-4 px-3">
-        <i class="fas fa-sign-out-alt"></i> <span>Logout</span>
-    </a>
 
+    <!-- Logout Button -->
+    <a href="#" id="logoutLink" class="nav-link mt-4"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
     <form id="logoutForm" action="logout.php" method="post" class="d-none">
-        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
+      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
     </form>
-
   </div>
 
   <!-- Top Navbar -->
@@ -145,27 +183,43 @@ if (empty($_SESSION['csrf_token'])) {
     </div>
   </main>
 
+  <!-- JavaScript -->
   <script>
-    // Sidebar toggle
     const toggleBtn = document.getElementById('toggleSidebar');
     const sidebar = document.getElementById('sidebar');
     const mainContent = document.getElementById('mainContent');
     const topNavbar = document.getElementById('topNavbar');
+    const overlay = document.getElementById('overlay');
 
+    // Toggle sidebar
     toggleBtn.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        // Mobile behavior
+        sidebar.classList.toggle('mobile-visible');
+        sidebar.classList.toggle('mobile-hidden');
+        overlay.classList.toggle('active');
+      } else {
+        // Desktop toggle (collapse)
         sidebar.classList.toggle('sidebar-collapsed');
         mainContent.classList.toggle('collapsed');
         topNavbar.classList.toggle('collapsed');
+      }
     });
 
-    // Logout click behavior
+    // Hide sidebar on overlay click (mobile)
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('mobile-visible');
+      sidebar.classList.add('mobile-hidden');
+      overlay.classList.remove('active');
+    });
+
+    // Logout functionality
     const logoutLink = document.getElementById('logoutLink');
     const logoutForm = document.getElementById('logoutForm');
-
     logoutLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        logoutForm.submit();
+      e.preventDefault();
+      logoutForm.submit();
     });
-    </script>
+  </script>
 </body>
 </html>
