@@ -110,12 +110,14 @@ if (empty($_SESSION['csrf_token'])) {
     <a href="#" class="nav-link"><i class="fas fa-users"></i> <span>Users</span></a>
     <a href="#" class="nav-link"><i class="fas fa-chart-line"></i> <span>Reports</span></a>
     <a href="#" class="nav-link"><i class="fas fa-cog"></i> <span>Settings</span></a>
-    <form action="logout.php" method="post" class="mt-4 px-3">
-      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
-      <button type="submit" class="btn btn-danger w-100">
+    <a href="#" id="logoutLink" class="nav-link text-white mt-4 px-3">
         <i class="fas fa-sign-out-alt"></i> <span>Logout</span>
-      </button>
+    </a>
+
+    <form id="logoutForm" action="logout.php" method="post" class="d-none">
+        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
     </form>
+
   </div>
 
   <!-- Top Navbar -->
