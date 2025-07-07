@@ -101,6 +101,26 @@ if (empty($_SESSION['csrf_token'])) {
         .main-content.collapsed {
             margin-left: var(--sidebar-collapsed-width);
         }
+        /* Mobile Behavior */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                width: var(--sidebar-width);
+            }
+
+            .sidebar.mobile-visible {
+                transform: translateX(0);
+            }
+
+            .top-navbar {
+                left: 0;
+                width: 100%;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
