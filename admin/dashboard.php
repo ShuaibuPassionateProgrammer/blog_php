@@ -91,6 +91,13 @@ if (empty($_SESSION['csrf_token'])) {
             left: var(--sidebar-collapsed-width);
             width: calc(100% - var(--sidebar-collapsed-width));
         }
+        /* Main Content */
+        .main-content {
+            margin-top: 56px;
+            margin-left: var(--sidebar-width);
+            padding: 2rem;
+            transition: margin-left 0.3s;
+        }
     </style>
 </head>
 <body>
