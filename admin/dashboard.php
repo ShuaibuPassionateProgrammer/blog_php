@@ -87,6 +87,10 @@ if (empty($_SESSION['csrf_token'])) {
             z-index: 1030;
             transition: left 0.3s, width 0.3s;
         }
+        .top-navbar.collapsed {
+            left: var(--sidebar-collapsed-width);
+            width: calc(100% - var(--sidebar-collapsed-width));
+        }
     </style>
 </head>
 <body>
