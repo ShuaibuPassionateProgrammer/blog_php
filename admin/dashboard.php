@@ -183,5 +183,9 @@ if (empty($_SESSION['csrf_token'])) {
             <p>You are logged in as <strong><?= htmlspecialchars($_SESSION['email']); ?></strong>.</p>
         </div>
     </main>
+
+    <script>
+        //
+    </script>
 </body>
 </html>
