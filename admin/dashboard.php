@@ -156,7 +156,11 @@ if (empty($_SESSION['csrf_token'])) {
         <a href="#" class="nav-link"><i class="fas fa-chart-line"></i> <span>Reports</span></a>
         <a href="#" class="nav-link"><i class="fas fa-cog"></i> <span>Settings</span></a>
 
-    
+        <!-- Logout Button -->
+        <a href="#" id="logoutLink" class="nav-link mt-4"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+        <form id="logoutForm" action="logout.php" method="post" class="d-none">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
+        </form>
     </div>
 </body>
 </html>
