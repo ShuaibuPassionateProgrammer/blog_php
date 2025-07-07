@@ -57,6 +57,9 @@ if (empty($_SESSION['csrf_token'])) {
             padding: 0.75rem 1rem;
             transition: background 0.2s;
         }
+        .sidebar a:hover {
+            background-color: #0b5ed7;
+        }
     </style>
 </head>
 <body>
