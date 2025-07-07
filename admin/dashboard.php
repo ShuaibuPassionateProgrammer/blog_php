@@ -60,6 +60,9 @@ if (empty($_SESSION['csrf_token'])) {
         .sidebar a:hover {
             background-color: #0b5ed7;
         }
+        .sidebar .active {
+            background-color: #084298;
+        }
     </style>
 </head>
 <body>
