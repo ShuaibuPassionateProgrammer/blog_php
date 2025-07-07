@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loading...</title>
     <style>
+        /* Reset and basic styling */
         * {
             margin: 0;
             padding: 0;
@@ -23,6 +24,11 @@
             align-items: center;
             height: 100vh;
             background-color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9999;
         }
 
         .loading {
@@ -38,15 +44,17 @@
     </style>
 </head>
 <body>
-    <div class="loader" role="status" aria-live="polite">
+    <div class="loader" role="status" aria-live="polite" aria-label="Loading content">
         <div class="loading">Loading...</div>
     </div>
 
     <script>
-        const loader = document.querySelector(".loader");
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 9000); // Hide loader after 9 seconds
+        window.addEventListener('load', () => {
+            const loader = document.querySelector(".loader");
+            if(loader) {
+                loader.style.display = "none";
+            }
+        });
     </script>
 </body>
 </html>
