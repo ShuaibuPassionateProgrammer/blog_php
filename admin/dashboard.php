@@ -143,6 +143,7 @@ if (empty($_SESSION['csrf_token'])) {
     </style>
 </head>
 <body>
-    //
+    <!-- Mobile Overlay -->
+    <div id="overlay" class="mobile-overlay"></div>
 </body>
 </html>
